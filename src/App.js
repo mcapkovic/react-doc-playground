@@ -1,8 +1,9 @@
 import React from 'react';
 import logo from './logo.svg';
+import PropTypes from 'prop-types';
 import './App.css';
 
-function App() {
+function App(props) {
   return (
     <div className="App">
       <header className="App-header">
@@ -24,3 +25,8 @@ function App() {
 }
 
 export default App;
+
+
+App.propTypes = {
+  name: PropTypes.string
+};

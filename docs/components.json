@@ -1,0 +1,39 @@
+[
+  {
+    "description": "",
+    "displayName": "Test",
+    "methods": [],
+    "props": {
+      "name": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": ""
+      }
+    },
+    "filename": "Projects\\my-app\\src\\components\\Test.js"
+  },
+  {
+    "description": "General component description.",
+    "displayName": "Component",
+    "methods": [],
+    "props": {
+      "bar": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Prop description",
+        "defaultValue": {
+          "value": "21",
+          "computed": false
+        }
+      }
+    },
+    "composes": [
+      "Foo"
+    ],
+    "filename": "Projects\\my-app\\src\\components\\Component.js"
+  }
+]
