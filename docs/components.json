@@ -12,7 +12,7 @@
         "description": ""
       }
     },
-    "filename": "Projects\\my-app\\src\\components\\Test.js"
+    "filename": "Projects\\react-doc-playground\\src\\components\\Test.js"
   },
   {
     "description": "General component description.",
@@ -34,6 +34,6 @@
     "composes": [
       "Foo"
     ],
-    "filename": "Projects\\my-app\\src\\components\\Component.js"
+    "filename": "Projects\\react-doc-playground\\src\\components\\Component.js"
   }
 ]
