@@ -1,25 +1,49 @@
 import React from 'react';
 import logo from './logo.svg';
 import PropTypes from 'prop-types';
+import PropsTable from 'react-docgen-props-table'
 import './App.css';
+import ComponentsDoc from './ComponentsDoc';
+import components from './docs/components.json'
+
+const docgenInfo = {
+  "description": "General component description.",
+  "displayName": "MyComponent",
+  "methods": [],
+  "props": {
+    "foo": {
+      "type": {
+        "name": "number"
+      },
+      "required": true,
+      "description": "Description foo."
+    },
+    "bar": {
+      "type": {
+        "name": "string"
+      },
+      "required": false,
+      "description": "Description bar.\n\n- markdown list-item 1\n- markdown list-item 2",
+      "defaultValue": {
+        "value": "'bar'",
+        "computed": false
+      }
+    },
+    "baz": {
+      "type": {
+        "name": "bool"
+      },
+      "required": false,
+      "description": "Description baz."
+    }
+  }
+}
 
 function App(props) {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+     <ComponentsDoc components ={components}/> 
     </div>
   );
 }

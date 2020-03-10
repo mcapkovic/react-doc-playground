@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const reactDocs = require("react-docgen"); // The React components to load
 const componentFolder = "./src/components"; // Where the JSON file ends up
-const componentJsonPath = "./docs/components.json";
+const componentJsonPath = "./src/docs/components.json";
 
 const componentDataArray = [];
 
@@ -35,7 +35,7 @@ function parseComponent(component, filename) {
     const shortname = filename.substring(splitIndex + 4);
     componentInfo.filename = shortname;
     pushComponent(componentInfo);
-    console.log(`${filename} - props found`);
+    console.log('\x1b[36m%s%s\x1b[0m ',filename, ' - props found');  //cyan
   } catch (error) {
     console.log(`${filename} - no props found`);
   }
